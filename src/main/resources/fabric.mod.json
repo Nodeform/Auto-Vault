@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "id": "autovault",
+  "version": "${version}",
+  "name": "AutoVault",
+  "description": "Client-side Trial Chamber Vault automation with item filtering.",
+  "authors": ["Dex"],
+  "license": "MIT",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "com.dex.autovault.AutoVaultClient"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=0.18.4",
+    "minecraft": "~1.21.11",
+    "fabric-api": "*"
+  }
+}
