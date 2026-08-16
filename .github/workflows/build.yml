@@ -20,16 +20,10 @@ jobs:
       - name: Set up Gradle
         uses: gradle/actions/setup-gradle@v4
         with:
-          gradle-version: 8.13
-
-      - name: Generate missing Gradle wrapper jar
-        run: gradle wrapper --gradle-version 8.13
-
-      - name: Grant execute permission for gradlew
-        run: chmod +x gradlew
+          gradle-version: wrapper
 
       - name: Build with Gradle
-        run: ./gradlew build
+        run: gradle build
 
       - name: Upload built jar
         uses: actions/upload-artifact@v4
